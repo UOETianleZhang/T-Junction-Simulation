@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="bootloop" key="top_hw_platform_1-mb_sys_inst/mb_system_i/microblaze_0-initElf"/>
+	<item value="Local" key="top_hw_platform_5-target"/>
+	<item value="top.bit" key="top_hw_platform_1-bitFile"/>
+	<item value="false" key="top_hw_platform_1-partial_bit"/>
+	<item value="top.bit" key="top_hw_platform_0-bitFile"/>
+	<item value="false" key="top_hw_platform_0-partial_bit"/>
+	<item value="top.mmi" key="top_hw_platform_5-bmmFile"/>
+	<item value="bootloop" key="top_hw_platform_4-mb_sys_inst/mb_system_i/microblaze_0-initElf"/>
+	<item value="Local" key="top_hw_platform_1-target"/>
+	<item value="top.bit" key="top_hw_platform_4-bitFile"/>
+	<item value="top.mmi" key="top_hw_platform_4-bmmFile"/>
+	<item value="top.bit" key="top_hw_platform_5-bitFile"/>
+	<item value="Local" key="top_hw_platform_0-target"/>
+	<item value="Local" key="top_hw_platform_4-target"/>
+	<item value="bootloop" key="top_hw_platform_5-mb_sys_inst/mb_system_i/microblaze_0-initElf"/>
+	<item value="Auto Detect" key="top_hw_platform_1-device"/>
+	<item value="top_hw_platform_5" key="programfpga.hwplatform"/>
+	<item value="false" key="top_hw_platform_4-partial_bit"/>
+	<item value="Auto Detect" key="top_hw_platform_5-device"/>
+	<item value="top.mmi" key="top_hw_platform_0-bmmFile"/>
+	<item value="top.mmi" key="top_hw_platform_1-bmmFile"/>
+	<item value="false" key="top_hw_platform_5-partial_bit"/>
+	<item value="Auto Detect" key="top_hw_platform_4-device"/>
+	<item value="Auto Detect" key="top_hw_platform_0-device"/>
+	<item value="bootloop" key="top_hw_platform_0-mb_sys_inst/mb_system_i/microblaze_0-initElf"/>
+</section>

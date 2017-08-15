@@ -1,0 +1,41 @@
+/*File Name: EXTRA.h
+Project Name: Traffic_Light
+Target Device/Platform: Basys3 Board (with Microblaze processor on the Artix-7 FPGA)
+Tool Version: Xilinx SDK 2015.2
+Name: Tianle Zhang
+Company: University of Edinburgh
+Creation Date and Time: 11/11/2016; 14:07
+Description:
+This header file contains nearly all macros and variables across files for extra features.
+This header file contains all declarations of functions in extra.c.
+*/
+
+#ifndef EXTRA_H_
+#define EXTRA_H_
+
+#include <stdio.h>
+#include "platform.h"
+#include "gpio_init.h"
+#include "xgpio.h"
+#include "control.h"
+#include "interface.h"
+#include "seg7_display.h"
+#include "xil_types.h"
+
+#define UP 1	//number used in "switch"
+#define LEFT 2
+#define DOWN 3
+#define RIGHT 4
+#define CARWIDTH 100 //some parameters about two cars
+#define CARHEIGHT 50
+
+void DisplayCarByPosition();
+void AIcar2();
+void ColourCar1();
+void excute(u16 button, XGpio P_BTN, int direction);
+double speed(double address, double speed_add);
+double accelerate(double address, double period, double LeftLimitSpeed, double RightLimitSpeed, double *speed_add);
+
+int carMode;	//to select
+
+#endif /* EXTRA_H_ */

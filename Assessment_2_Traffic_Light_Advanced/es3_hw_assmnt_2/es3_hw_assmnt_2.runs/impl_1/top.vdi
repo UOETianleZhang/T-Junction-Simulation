@@ -1,0 +1,751 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Fri Nov 25 13:21:37 2016
+# Process ID: 6774
+# Log file: /home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.runs/impl_1/top.vdi
+# Journal file: /home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 392 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_0/mb_system_microblaze_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/microblaze_0/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_microblaze_0_0/mb_system_microblaze_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/microblaze_0/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_dlmb_v10_0/mb_system_dlmb_v10_0.xdc] for cell 'mb_sys_inst/mb_system_i/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_dlmb_v10_0/mb_system_dlmb_v10_0.xdc] for cell 'mb_sys_inst/mb_system_i/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_ilmb_v10_0/mb_system_ilmb_v10_0.xdc] for cell 'mb_sys_inst/mb_system_i/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_ilmb_v10_0/mb_system_ilmb_v10_0.xdc] for cell 'mb_sys_inst/mb_system_i/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_0/mb_system_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_0/mb_system_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/rst_clk_wiz_1_100M'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_0/mb_system_rst_clk_wiz_1_100M_0.xdc] for cell 'mb_sys_inst/mb_system_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_rst_clk_wiz_1_100M_0/mb_system_rst_clk_wiz_1_100M_0.xdc] for cell 'mb_sys_inst/mb_system_i/rst_clk_wiz_1_100M'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_gpio_0_0/mb_system_axi_gpio_0_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_leds/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_gpio_0_0/mb_system_axi_gpio_0_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_leds/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_gpio_0_0/mb_system_axi_gpio_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_leds/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_gpio_0_0/mb_system_axi_gpio_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_leds/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_0/mb_system_gpio_leds_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_s_switches/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_0/mb_system_gpio_leds_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_s_switches/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_0/mb_system_gpio_leds_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_s_switches/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_0/mb_system_gpio_leds_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_s_switches/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_0/mb_system_gpio_s_switches_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_u/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_0/mb_system_gpio_s_switches_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_u/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_0/mb_system_gpio_s_switches_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_u/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_0/mb_system_gpio_s_switches_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_u/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_1/mb_system_gpio_leds_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_hex_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_1/mb_system_gpio_leds_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_hex_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_1/mb_system_gpio_leds_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_hex_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_leds_1/mb_system_gpio_leds_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_hex_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_7seg_0/mb_system_gpio_7seg_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_sel/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_7seg_0/mb_system_gpio_7seg_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_sel/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_7seg_0/mb_system_gpio_7seg_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_sel/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_7seg_0/mb_system_gpio_7seg_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_7seg_sel/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_1/mb_system_gpio_s_switches_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vgs_vs/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_1/mb_system_gpio_s_switches_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vgs_vs/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_1/mb_system_gpio_s_switches_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vgs_vs/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_1/mb_system_gpio_s_switches_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vgs_vs/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_2/mb_system_gpio_s_switches_2_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_2_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_2/mb_system_gpio_s_switches_2_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_2_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_2/mb_system_gpio_s_switches_2.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_2_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_2/mb_system_gpio_s_switches_2.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_2_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_3/mb_system_gpio_s_switches_3_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vga_hs/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_3/mb_system_gpio_s_switches_3_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vga_hs/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_3/mb_system_gpio_s_switches_3.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vga_hs/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_s_switches_3/mb_system_gpio_s_switches_3.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_vga_hs/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_hs_0/mb_system_gpio_vga_hs_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_0_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_hs_0/mb_system_gpio_vga_hs_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_0_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_hs_0/mb_system_gpio_vga_hs_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_0_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_hs_0/mb_system_gpio_vga_hs_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_0_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_0/mb_system_gpio_p_btn_u_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_l/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_0/mb_system_gpio_p_btn_u_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_l/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_0/mb_system_gpio_p_btn_u_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_l/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_0/mb_system_gpio_p_btn_u_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_l/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_1/mb_system_gpio_p_btn_u_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_r/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_1/mb_system_gpio_p_btn_u_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_r/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_1/mb_system_gpio_p_btn_u_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_r/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_1/mb_system_gpio_p_btn_u_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_r/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_2/mb_system_gpio_p_btn_u_2_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_d/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_2/mb_system_gpio_p_btn_u_2_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_d/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_2/mb_system_gpio_p_btn_u_2.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_d/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_p_btn_u_2/mb_system_gpio_p_btn_u_2.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_p_btn_d/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_uartlite_0_0/mb_system_axi_uartlite_0_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_uartlite_0_0/mb_system_axi_uartlite_0_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/axi_uartlite_0/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_uartlite_0_0/mb_system_axi_uartlite_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_uartlite_0_0/mb_system_axi_uartlite_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/axi_uartlite_0/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_mdm_0_0/mb_system_mdm_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/mdm_0/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_mdm_0_0/mb_system_mdm_0_0.xdc:50]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1836.848 ; gain = 496.461 ; free physical = 19068 ; free virtual = 90145
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_mdm_0_0/mb_system_mdm_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/mdm_0/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_intc_0_0/mb_system_axi_intc_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/axi_intc_0/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_intc_0_0/mb_system_axi_intc_0_0.xdc] for cell 'mb_sys_inst/mb_system_i/axi_intc_0/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_region_0/mb_system_gpio_vga_region_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_1_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_region_0/mb_system_gpio_vga_region_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_1_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_region_0/mb_system_gpio_vga_region_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_1_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_vga_region_0/mb_system_gpio_vga_region_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_1_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_0/mb_system_gpio_reg_1_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_4_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_0/mb_system_gpio_reg_1_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_4_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_0/mb_system_gpio_reg_1_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_4_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_0/mb_system_gpio_reg_1_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_4_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_1/mb_system_gpio_reg_1_colour_out_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_3_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_1/mb_system_gpio_reg_1_colour_out_1_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_3_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_1/mb_system_gpio_reg_1_colour_out_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_3_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_1/mb_system_gpio_reg_1_colour_out_1.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_3_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_2/mb_system_gpio_reg_1_colour_out_2_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_5_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_2/mb_system_gpio_reg_1_colour_out_2_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_5_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_2/mb_system_gpio_reg_1_colour_out_2.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_5_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_2/mb_system_gpio_reg_1_colour_out_2.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_5_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_3/mb_system_gpio_reg_1_colour_out_3_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_6_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_3/mb_system_gpio_reg_1_colour_out_3_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_6_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_3/mb_system_gpio_reg_1_colour_out_3.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_6_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_1_colour_out_3/mb_system_gpio_reg_1_colour_out_3.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_6_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_3_colour_out_0/mb_system_gpio_reg_3_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_9_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_3_colour_out_0/mb_system_gpio_reg_3_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_9_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_3_colour_out_0/mb_system_gpio_reg_3_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_9_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_3_colour_out_0/mb_system_gpio_reg_3_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_9_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_4_colour_out_0/mb_system_gpio_reg_4_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_8_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_4_colour_out_0/mb_system_gpio_reg_4_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_8_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_4_colour_out_0/mb_system_gpio_reg_4_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_8_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_4_colour_out_0/mb_system_gpio_reg_4_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_8_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_5_colour_out_0/mb_system_gpio_reg_5_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_7_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_5_colour_out_0/mb_system_gpio_reg_5_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_7_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_5_colour_out_0/mb_system_gpio_reg_5_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_7_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_5_colour_out_0/mb_system_gpio_reg_5_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_7_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_7_colour_out_0/mb_system_gpio_reg_7_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_10_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_7_colour_out_0/mb_system_gpio_reg_7_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_10_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_7_colour_out_0/mb_system_gpio_reg_7_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_10_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_7_colour_out_0/mb_system_gpio_reg_7_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_10_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_9_colour_out_0/mb_system_gpio_reg_9_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_11_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_9_colour_out_0/mb_system_gpio_reg_9_colour_out_0_board.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_11_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_9_colour_out_0/mb_system_gpio_reg_9_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_11_colour_out/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_gpio_reg_9_colour_out_0/mb_system_gpio_reg_9_colour_out_0.xdc] for cell 'mb_sys_inst/mb_system_i/gpio_reg_11_colour_out/U0'
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/constrs_1/imports/sources_1/constraints.xdc]
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/constrs_1/imports/sources_1/constraints.xdc]
+Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_intc_0_0/mb_system_axi_intc_0_0_clocks.xdc] for cell 'mb_sys_inst/mb_system_i/axi_intc_0/U0'
+Finished Parsing XDC File [/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/bd/mb_system/ip/mb_system_axi_intc_0_0/mb_system_axi_intc_0_0_clocks.xdc] for cell 'mb_sys_inst/mb_system_i/axi_intc_0/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'top'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/ipshared/xilinx.com/microblaze_v9_5/cfde4cbb/data/mb_bootloop_le.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 98 instances were transformed.
+  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 2 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1838.848 ; gain = 819.035 ; free physical = 19056 ; free virtual = 90139
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -330 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.42 . Memory (MB): peak = 1852.879 ; gain = 7.027 ; free physical = 19063 ; free virtual = 90139
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1e3fbd473
+
+Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:00.72 . Memory (MB): peak = 1859.879 ; gain = 0.000 ; free physical = 19029 ; free virtual = 90127
+
+Phase 2 Constant Propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-10] Eliminated 1304 cells.
+Phase 2 Constant Propagation | Checksum: 20a3641e6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1859.879 ; gain = 0.000 ; free physical = 18984 ; free virtual = 90126
+
+Phase 3 Sweep
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/ALL_Bits[0].ALU_Bit_I1/LO.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/ALL_Bits[1].ALU_Bit_I1/EX_CarryOut.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/ALU_I/LO_2.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Zero_Detect_I/EX_Op1_Zero.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/EX_Op1_Zero.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[2].OF_Piperun_Stage/Using_FPGA.Native.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[3].OF_Piperun_Stage/ex_branch_with_delayslot_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[4].OF_Piperun_Stage/use_Reg_Neg_S_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[5].OF_Piperun_Stage/Using_FPGA.Native.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[6].OF_Piperun_Stage/use_Reg_Neg_S_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[7].OF_Piperun_Stage/mem_is_multi_or_load_instr_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[7].OF_Piperun_Stage/use_Reg_Neg_S_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[8].OF_Piperun_Stage/ex_is_multi_or_load_instr_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[8].OF_Piperun_Stage/use_Reg_Neg_S_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Use_MuxCy[9].OF_Piperun_Stage/mem_is_multi_or_load_instr_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Using_PC_Incr_Dbg_or_Prot.if_pc_incr_carry_and_1/Carry_IN0_in.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Using_PC_Incr_Dbg_or_Prot.if_pc_incr_carry_and_1/if_pc_reg[29].
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/if_pc_incr_carry_and_0/Carry_IN0_in.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/if_pc_incr_carry_and_3/Performace_Debug_Control.dbg_stop_if_delay_i_reg.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/jump_logic_I1/EX_Op1_Zero.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/mem_PipeRun_carry_and/Carry_IN.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/mem_wait_on_ready_N_carry_or/Carry_IN.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/mem_wait_on_ready_N_carry_or/Carry_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/Carry_OUT.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/EX_Op1_Zero.
+WARNING: [Opt 31-6] Deleting driverless net: mb_sys_inst/mb_system_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/mem_databus_ready_sel_carry_or/Carry_OUT.
+INFO: [Opt 31-12] Eliminated 3682 unconnected nets.
+INFO: [Opt 31-11] Eliminated 4886 unconnected cells.
+Phase 3 Sweep | Checksum: 15c5720cc
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1859.879 ; gain = 0.000 ; free physical = 18960 ; free virtual = 90124
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1859.879 ; gain = 0.000 ; free physical = 18958 ; free virtual = 90124
+Ending Logic Optimization Task | Checksum: 15c5720cc
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1859.879 ; gain = 0.000 ; free physical = 18955 ; free virtual = 90124
+Implement Debug Cores | Checksum: 221c58895
+Logic Optimization | Checksum: 221c58895
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 3.12 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 32 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 64
+Ending PowerOpt Patch Enables Task | Checksum: 15c5720cc
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1896.895 ; gain = 0.000 ; free physical = 18856 ; free virtual = 90056
+Ending Power Optimization Task | Checksum: 15c5720cc
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1896.895 ; gain = 37.016 ; free physical = 18856 ; free virtual = 90056
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1896.895 ; gain = 58.047 ; free physical = 18856 ; free virtual = 90056
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1928.910 ; gain = 0.000 ; free physical = 18855 ; free virtual = 90056
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.runs/impl_1/top_drc_opted.rpt.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -330 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Runtime Estimator
+Phase 1 Placer Runtime Estimator | Checksum: f0f50e03
+
+Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.29 . Memory (MB): peak = 1930.910 ; gain = 0.000 ; free physical = 18840 ; free virtual = 90053
+
+Phase 2 Placer Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1930.910 ; gain = 0.000 ; free physical = 18840 ; free virtual = 90053
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1930.910 ; gain = 0.000 ; free physical = 18840 ; free virtual = 90054
+
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device
+
+Phase 2.1.1 Pre-Place Cells
+Phase 2.1.1 Pre-Place Cells | Checksum: ade658e8
+
+Time (s): cpu = 00:00:00.40 ; elapsed = 00:00:00.43 . Memory (MB): peak = 1930.910 ; gain = 0.000 ; free physical = 18840 ; free virtual = 90054
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 2.1.2 IO & Clk Clean Up
+Phase 2.1.2 IO & Clk Clean Up | Checksum: ade658e8
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18828 ; free virtual = 90049
+
+Phase 2.1.3 Implementation Feasibility check On IDelay
+Phase 2.1.3 Implementation Feasibility check On IDelay | Checksum: ade658e8
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18828 ; free virtual = 90049
+
+Phase 2.1.4 Commit IO Placement
+Phase 2.1.4 Commit IO Placement | Checksum: ff3ff595
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18828 ; free virtual = 90049
+Phase 2.1 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 18be30a9d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18828 ; free virtual = 90049
+
+Phase 2.2 Build Placer Netlist Model
+
+Phase 2.2.1 Place Init Design
+
+Phase 2.2.1.1 Init Lut Pin Assignment
+Phase 2.2.1.1 Init Lut Pin Assignment | Checksum: 2e0081841
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18827 ; free virtual = 90050
+Phase 2.2.1 Place Init Design | Checksum: 28acac577
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18814 ; free virtual = 90040
+Phase 2.2 Build Placer Netlist Model | Checksum: 28acac577
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18814 ; free virtual = 90040
+
+Phase 2.3 Constrain Clocks/Macros
+
+Phase 2.3.1 Constrain Global/Regional Clocks
+Phase 2.3.1 Constrain Global/Regional Clocks | Checksum: 28acac577
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18814 ; free virtual = 90040
+Phase 2.3 Constrain Clocks/Macros | Checksum: 28acac577
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18814 ; free virtual = 90040
+Phase 2 Placer Initialization | Checksum: 28acac577
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1976.934 ; gain = 46.023 ; free physical = 18814 ; free virtual = 90040
+
+Phase 3 Global Placement
+Phase 3 Global Placement | Checksum: 1b19dba16
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18804 ; free virtual = 90036
+
+Phase 4 Detail Placement
+
+Phase 4.1 Commit Multi Column Macros
+Phase 4.1 Commit Multi Column Macros | Checksum: 1b19dba16
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18804 ; free virtual = 90036
+
+Phase 4.2 Commit Most Macros & LUTRAMs
+Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 16f733167
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18803 ; free virtual = 90036
+
+Phase 4.3 Area Swap Optimization
+Phase 4.3 Area Swap Optimization | Checksum: 1a0ad9afe
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18803 ; free virtual = 90036
+
+Phase 4.4 updateClock Trees: DP
+Phase 4.4 updateClock Trees: DP | Checksum: 1a0ad9afe
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18803 ; free virtual = 90036
+
+Phase 4.5 Timing Path Optimizer
+Phase 4.5 Timing Path Optimizer | Checksum: 1f5ae340d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18800 ; free virtual = 90036
+
+Phase 4.6 Small Shape Detail Placement
+
+Phase 4.6.1 Commit Small Macros & Core Logic
+
+Phase 4.6.1.1 setBudgets
+Phase 4.6.1.1 setBudgets | Checksum: 1bcb992d4
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18800 ; free virtual = 90035
+
+Phase 4.6.1.2 Commit Slice Clusters
+Phase 4.6.1.2 Commit Slice Clusters | Checksum: 27c222a79
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18763 ; free virtual = 90028
+Phase 4.6.1 Commit Small Macros & Core Logic | Checksum: 27c222a79
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18763 ; free virtual = 90028
+
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns
+Phase 4.6.2 Clock Restriction Legalization for Leaf Columns | Checksum: 27c222a79
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18763 ; free virtual = 90028
+
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins
+Phase 4.6.3 Clock Restriction Legalization for Non-Clock Pins | Checksum: 27c222a79
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18763 ; free virtual = 90028
+Phase 4.6 Small Shape Detail Placement | Checksum: 27c222a79
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18762 ; free virtual = 90029
+
+Phase 4.7 Re-assign LUT pins
+Phase 4.7 Re-assign LUT pins | Checksum: 27c222a79
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18759 ; free virtual = 90028
+Phase 4 Detail Placement | Checksum: 27c222a79
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18758 ; free virtual = 90028
+
+Phase 5 Post Placement Optimization and Clean-Up
+
+Phase 5.1 PCOPT Shape updates
+Phase 5.1 PCOPT Shape updates | Checksum: 24a7a63aa
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18757 ; free virtual = 90028
+
+Phase 5.2 Post Commit Optimization
+
+Phase 5.2.1 updateClock Trees: PCOPT
+Phase 5.2.1 updateClock Trees: PCOPT | Checksum: 24a7a63aa
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:12 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18757 ; free virtual = 90028
+
+Phase 5.2.2 Post Placement Optimization
+
+Phase 5.2.2.1 Post Placement Timing Optimization
+
+Phase 5.2.2.1.1 Restore Best Placement
+Phase 5.2.2.1.1 Restore Best Placement | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18759 ; free virtual = 90052
+
+Phase 5.2.2.1.2 updateTiming after Restore Best Placement
+Phase 5.2.2.1.2 updateTiming after Restore Best Placement | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18759 ; free virtual = 90052
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-6.898. For the most accurate timing information please run report_timing.
+Phase 5.2.2.1 Post Placement Timing Optimization | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18759 ; free virtual = 90052
+Phase 5.2.2 Post Placement Optimization | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18759 ; free virtual = 90052
+Phase 5.2 Post Commit Optimization | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18758 ; free virtual = 90052
+
+Phase 5.3 Sweep Clock Roots: Post-Placement
+Phase 5.3 Sweep Clock Roots: Post-Placement | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18757 ; free virtual = 90052
+
+Phase 5.4 Post Placement Cleanup
+Phase 5.4 Post Placement Cleanup | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18747 ; free virtual = 90052
+
+Phase 5.5 Placer Reporting
+
+Phase 5.5.1 Restore STA
+Phase 5.5.1 Restore STA | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18747 ; free virtual = 90052
+Phase 5.5 Placer Reporting | Checksum: 100604611
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18747 ; free virtual = 90052
+
+Phase 5.6 Final Placement Cleanup
+Phase 5.6 Final Placement Cleanup | Checksum: 89516ca9
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18747 ; free virtual = 90052
+Phase 5 Post Placement Optimization and Clean-Up | Checksum: 89516ca9
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18747 ; free virtual = 90052
+Ending Placer Task | Checksum: 72a9c21e
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:27 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18747 ; free virtual = 90052
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:28 . Memory (MB): peak = 2008.949 ; gain = 78.039 ; free physical = 18747 ; free virtual = 90052
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2008.949 ; gain = 0.000 ; free physical = 18718 ; free virtual = 90053
+report_io: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2008.949 ; gain = 0.000 ; free physical = 18719 ; free virtual = 90045
+report_utilization: Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.81 . Memory (MB): peak = 2008.949 ; gain = 0.000 ; free physical = 18721 ; free virtual = 90045
+report_control_sets: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2008.949 ; gain = 0.000 ; free physical = 18720 ; free virtual = 90045
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -330 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: cd81f04c
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2024.594 ; gain = 15.645 ; free physical = 18653 ; free virtual = 89980
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: cd81f04c
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2024.594 ; gain = 15.645 ; free physical = 18650 ; free virtual = 89977
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: cd81f04c
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2034.582 ; gain = 25.633 ; free physical = 18621 ; free virtual = 89949
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 139a5116a
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 2052.582 ; gain = 43.633 ; free physical = 18592 ; free virtual = 89921
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-6.642 | TNS=-77.423| WHS=-0.147 | THS=-77.564|
+
+Phase 2 Router Initialization | Checksum: 57b508cc
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2052.582 ; gain = 43.633 ; free physical = 18572 ; free virtual = 89900
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 7e3852df
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 2052.582 ; gain = 43.633 ; free physical = 18571 ; free virtual = 89900
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1353
+ Number of Nodes with overlaps = 279
+ Number of Nodes with overlaps = 148
+ Number of Nodes with overlaps = 43
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 0
+
+Phase 4.1.1 Update Timing
+Phase 4.1.1 Update Timing | Checksum: 19691a838
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:22 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18561 ; free virtual = 89899
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.439 | TNS=-89.931| WHS=N/A    | THS=N/A    |
+
+
+Phase 4.1.2 GlobIterForTiming
+
+Phase 4.1.2.1 Update Timing
+Phase 4.1.2.1 Update Timing | Checksum: 20f00a5d8
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:23 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18561 ; free virtual = 89899
+
+Phase 4.1.2.2 Fast Budgeting
+Phase 4.1.2.2 Fast Budgeting | Checksum: 193dfc38e
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:23 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18560 ; free virtual = 89899
+Phase 4.1.2 GlobIterForTiming | Checksum: 1cc72f26a
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:23 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18560 ; free virtual = 89899
+Phase 4.1 Global Iteration 0 | Checksum: 1cc72f26a
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:23 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18560 ; free virtual = 89899
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 397
+ Number of Nodes with overlaps = 75
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 33
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+
+Phase 4.2.1 Update Timing
+Phase 4.2.1 Update Timing | Checksum: 1948bc23e
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:31 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18533 ; free virtual = 89878
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.661 | TNS=-91.835| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2525c53c2
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:31 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18533 ; free virtual = 89878
+Phase 4 Rip-up And Reroute | Checksum: 2525c53c2
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:31 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18533 ; free virtual = 89878
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 230f3033e
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:31 . Memory (MB): peak = 2057.574 ; gain = 48.625 ; free physical = 18533 ; free virtual = 89878
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.432 | TNS=-89.718| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: cf231534
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:32 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18474 ; free virtual = 89823
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: cf231534
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:32 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18474 ; free virtual = 89823
+Phase 5 Delay and Skew Optimization | Checksum: cf231534
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:32 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18474 ; free virtual = 89823
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Update Timing
+Phase 6.1 Update Timing | Checksum: 1284de999
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:33 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.372 | TNS=-85.607| WHS=0.029  | THS=0.000  |
+
+Phase 6 Post Hold Fix | Checksum: faa12a85
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:33 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 2.73085 %
+  Global Horizontal Routing Utilization  = 3.64953 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 52.2523%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 47.7477%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 64.7059%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 73.5294%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 126e98163
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:33 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 126e98163
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:00:33 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1829c4fb0
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:33 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-7.372 | TNS=-85.607| WHS=0.029  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1829c4fb0
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:33 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:00:33 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+55 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:18 ; elapsed = 00:00:34 . Memory (MB): peak = 2099.566 ; gain = 90.617 ; free physical = 18472 ; free virtual = 89821
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2131.582 ; gain = 0.000 ; free physical = 18457 ; free virtual = 89819
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.runs/impl_1/top_drc_routed.rpt.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -330 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Running DRC as a precondition to command write_bitstream
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC 23-20] Rule violation (CFGBVS-1) Missing CFGBVS and CONFIG_VOLTAGE Design Properties - Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__0 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__0__0 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__1 input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__10 input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__11 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__12 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__13 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__14 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__15 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__16 input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__17 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__18 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__19 input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__2 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__20 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__21 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__22 input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__3 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__4 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__5 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__6 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__7 input B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__8 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPIP-1) Input pipelining - DSP VGACntrl_inst/colour3__9 input A B is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__0 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__0__0 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__1 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__10 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__11 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__12 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__13 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__14 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__15 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__16 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__17 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__18 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__19 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__2 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__20 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__21 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__22 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__3 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__4 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__5 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__6 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__7 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__8 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (DPOP-1) Output pipelining - DSP VGACntrl_inst/colour3__9 output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net VGACntrl_inst/Snake/Control_Color_Out_reg[3]/G0 is a gated clock net sourced by a combinational pin VGACntrl_inst/Snake/Control_Color_Out_reg[3]/L3_2/O, cell VGACntrl_inst/Snake/Control_Color_Out_reg[3]/L3_2 (in VGACntrl_inst/Snake/Control_Color_Out_reg[3] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net VGACntrl_inst/Snake/Control_Color_Out_reg[6]/G0 is a gated clock net sourced by a combinational pin VGACntrl_inst/Snake/Control_Color_Out_reg[6]/L3_2/O, cell VGACntrl_inst/Snake/Control_Color_Out_reg[6]/L3_2 (in VGACntrl_inst/Snake/Control_Color_Out_reg[6] macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC 23-20] Rule violation (PDRC-153) Gated clock check - Net VGACntrl_inst/VGAInterface_instance/E[0] is a gated clock net sourced by a combinational pin VGACntrl_inst/VGAInterface_instance/Control_Color_Out_reg[11]_i_1/O, cell VGACntrl_inst/VGAInterface_instance/Control_Color_Out_reg[11]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 52 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Generating merged BMM file for the design top 'top'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad5.0/es3_hw_assmnt_2/es3_hw_assmnt_2.srcs/sources_1/ipshared/xilinx.com/microblaze_v9_5/cfde4cbb/data/mb_bootloop_le.elf 
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2347.141 ; gain = 175.520 ; free physical = 18163 ; free virtual = 89583
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 13:23:48 2016...

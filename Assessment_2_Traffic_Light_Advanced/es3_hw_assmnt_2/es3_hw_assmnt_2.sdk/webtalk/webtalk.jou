@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# 
+# Start of session at: Thu Nov 24 00:44:35 2016
+# Process ID: 16744
+# Log file: E:/software/Assessment_2_Traffic_Light_Ad4.0/es3_hw_assmnt_2/es3_hw_assmnt_2.sdk/webtalk/webtalk.log
+# Journal file: E:/software/Assessment_2_Traffic_Light_Ad4.0/es3_hw_assmnt_2/es3_hw_assmnt_2.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

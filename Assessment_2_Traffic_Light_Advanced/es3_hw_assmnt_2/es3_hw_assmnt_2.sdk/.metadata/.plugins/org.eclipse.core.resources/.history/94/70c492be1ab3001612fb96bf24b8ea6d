@@ -1,0 +1,328 @@
+/*File Name: control.c
+Project Name: Traffic_Light
+Target Device/Platform: Basys3 Board (with Microblaze processor on the Artix-7 FPGA)
+Tool Version: Xilinx SDK 2015.2
+Name: Tianle Zhang
+Company: University of Edinburgh
+Creation Date and Time: 11/11/2016; 14:07
+Description:
+This source file contains functions used to drive the traffic light.
+
+There are several functions in this file.
+The changeMode() function is called by the hwTimerISR(), used to change states of traffic light.
+The setDisplayTime() function is to set the display period of a individual state,
+by receiving a period you want and the state number,
+and it is just used in the changeMode().
+The Switch() function uses a switch to simulate the function of pedestrian button.
+
+The displayLightbyMode() function receives an integer, to display different traffic light states by the integer
+The Button() function is used to avoid bounces, and change PD signal when finish pressing the left button.
+The transmit() function is used to transmit values from control.c to main.c, using pointers to realize,
+and it is an alternative way of defining variables in header files.
+
+All these functions are declared in the control.h header file.*/
+
+#include "control.h"
+#include <stdio.h>
+#include "platform.h"
+#include "gpio_init.h"
+#include "xgpio.h"
+#include "interface.h"
+#include "seg7_display.h"
+#include "xil_types.h"
+
+int pulsetimer=1;
+int PDtimer=0;
+u16 ledvalue;
+int rightlimit;
+int RightLimit=0.1 SECOND;
+
+int PD=0;
+int PD1=0;
+int PD2=0;
+
+int timereg[20];	//integer array timereg[20] is to register the period in different states.
+
+
+//The changeMode() function is called by the hwTimerISR(), used to change states of traffic light.
+void changeMode()
+{
+	/*because PD light will turn on in 2 situations in one loop:
+	 * road 1 turn red when road 2 is red and vise versa,
+	 * I need to use 2 signal two control PD light in different periods of time.
+	 */
+	if(PD && (mode<4))
+		PD1 = 1;	//road 1 turn red when road 2 is red
+	if(PD && (mode>=4))
+		PD2 = 1;	//road 2 turn red when road 1 is red
+
+	//set display time individually, all states need to be set
+	setDisplayTime(0.1 SECOND, 0);
+	setDisplayTime(5 SECOND, 1);
+	setDisplayTime(1 SECOND, 2);
+	setDisplayTime((PD1 ? (7 SECOND) : (2 SECOND)), 3); //the period will be longer if PD need to be displayed
+	setDisplayTime(1 SECOND, 4);
+	setDisplayTime(5 SECOND, 5);
+	setDisplayTime(1 SECOND, 6);
+	setDisplayTime((PD2 ? (7 SECOND) : (2 SECOND)), 7);	//the period will be longer if PD need to be displayed
+	setDisplayTime(1 SECOND, 8);
+	setDisplayTime(5 SECOND, 9);
+	setDisplayTime(2 SECOND, 10);
+
+	if((mode==3)||(mode==7))
+		PDtimer++;	//PDtimer is to control pedestrian light's situations by time
+	else
+		PDtimer=0;
+
+	if(mode>9)	//reset everything to form a loop
+		{
+			mode = 1;
+			pulsetimer = 2.1 SECOND;	//period of mode 1 + period of mode 2, get back to the 2nd state
+			PD1=0;
+			PD2=0;
+		}
+
+	//calculate the number to display (timedisplay)
+	int i;
+	for(i=0,RightLimit = 0;i<=(mode);i++)
+		RightLimit += timereg[i];
+	//just before the pedestrian light is on(both are red), 7-segment will display 2 instead of 7
+	if(((mode==3)&&(PD1))||((mode==7)&&(PD2)))
+		if(PDtimer <= (2 SECOND))
+			RightLimit -= (5 SECOND);
+	//timedisplay = remaining_time * 10(for displaying decimal) / 250(the frequency of interrupt in one second)
+	timedisplay = (RightLimit - pulsetimer)/25;
+
+}
+
+/*The setDisplayTime() function is to set the display period of a individual state
+and it is just used in the changeMode().
+how to use: setDisplayTime(period_you_want, which_state_in_switch).
+*/
+void setDisplayTime(int period, int order)
+{
+	int i;
+	rightlimit = 0;
+
+	timereg[order] = period;		//integer array timereg[20] is to register the period in different states.
+	for(i=0;i<=order;i++)
+		rightlimit += timereg[i];
+
+	//since we need call this function many times,
+	//accurate "if else" condition is written to avoid pulsetimer add more than once at one interrupt.
+	if((pulsetimer > (rightlimit-period)) && (pulsetimer < rightlimit))
+		pulsetimer++;
+	else if(pulsetimer == (rightlimit))
+		{
+			pulsetimer++;
+			mode++;
+		}
+}
+
+/*The displayLightbyMode() function receives an integer, to display different traffic light states by the integer
+ * mode is defined in control.h, change by changeMode(), and choose a state in here
+ */
+void displayLightbyMode(int mode)
+{
+
+	switch(mode)
+	{
+		case 0:
+			turnColour(1, WHITE, WHITE, WHITE);
+			turnColour(2, WHITE, WHITE, WHITE);
+			turnColour(3, WHITE, WHITE, WHITE);
+			break;
+		case 1:
+			turnColour(1, WHITE, WHITE, GREEN);
+			turnColour(2, WHITE, RED, WHITE);
+			turnColour(3, RED, WHITE, WHITE);
+			ledvalue = ledswift(ledvalue, 2, 1);
+			ledvalue = ledswift(ledvalue, 3, 1);
+			break;
+		case 2:
+			turnColour(1, WHITE, YELLOW, WHITE);
+			ledvalue = ledswift(ledvalue, 4, 1);
+			ledvalue = ledswift(ledvalue, 3, 0);
+			break;
+		/*if the pedestrian button is pressed, case 3 will be 7-second long,
+		 * 2s for red lights, 3s for the pedestrian light, and the remaining 2s for flashing
+		 *otherwise, case 3 will be just 2-second long
+		 */
+		case 3:
+			if(PDtimer <= (2 SECOND))								//both roads are red
+			{
+				turnColour(1, RED, WHITE, WHITE);
+				ledvalue = ledswift(ledvalue, 5, 1);
+				ledvalue = ledswift(ledvalue, 4, 0);
+			}
+			else if((PDtimer > (2 SECOND))&&(PDtimer < (5 SECOND)))		//pedestrian light turns green
+			{
+				ledvalue = ledswift(ledvalue, 15, 0);
+				turnColour(2, WHITE, GREEN, WHITE);
+			}
+			else
+			{
+				PD = 0;															//it is useless to press the PD button now
+				ledvalue = ledswift(ledvalue, 15, 0);
+				if((PDtimer >= (5 SECOND))&&(PDtimer < (5.2 SECOND)))			//start flashing
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (5.2 SECOND))&&(PDtimer < (5.4 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (5.4 SECOND))&&(PDtimer <  (5.6 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (5.6 SECOND))&&(PDtimer < (5.8 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (5.8 SECOND))&&(PDtimer < (6 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (6 SECOND))&&(PDtimer < (6.2 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (6.2 SECOND))&&(PDtimer <  (6.4 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (6.4 SECOND))&&(PDtimer < (6.6 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (6.6 SECOND))&&(PDtimer < (6.8 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (6.8 SECOND))&&(PDtimer < (7 SECOND - 10)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else
+				{
+					turnColour(2, WHITE, WHITE, WHITE);
+				}
+			}
+			break;
+		case 4:
+			turnColour(3, RED, YELLOW, WHITE);
+			turnColour(2, WHITE, RED, WHITE);
+			ledvalue = ledswift(ledvalue, 1, 1);
+			break;
+		case 5:
+			turnColour(3, WHITE, WHITE, GREEN);
+			ledvalue = ledswift(ledvalue, 0, 1);
+			ledvalue = ledswift(ledvalue, 1, 0);
+			ledvalue = ledswift(ledvalue, 2, 0);
+			break;
+		case 6:
+			turnColour(3, WHITE, YELLOW, WHITE);
+			ledvalue = ledswift(ledvalue, 1, 1);
+			ledvalue = ledswift(ledvalue, 0, 0);
+			break;
+		case 7:			//similar with case 3
+			if(PDtimer <= (2 SECOND))
+			{
+				turnColour(3, RED, WHITE, WHITE);
+				ledvalue = ledswift(ledvalue, 2, 1);
+				ledvalue = ledswift(ledvalue, 1, 0);
+			}
+			else
+			{
+				ledvalue = ledswift(ledvalue, 15, 0);
+				PD = 0;
+				if((PDtimer > (2 SECOND))&&(PDtimer < (5 SECOND)))
+				{
+					turnColour(2, WHITE, GREEN, WHITE);
+					ledvalue = ledswift(ledvalue, 15, 0);
+				}
+				else if((PDtimer >= (5 SECOND))&&(PDtimer < (5.2 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (5.2 SECOND))&&(PDtimer < (5.4 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (5.4 SECOND))&&(PDtimer <  (5.6 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (5.6 SECOND))&&(PDtimer < (5.8 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (5.8 SECOND))&&(PDtimer < (6 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (6 SECOND))&&(PDtimer < (6.2 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (6.2 SECOND))&&(PDtimer <  (6.4 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (6.4 SECOND))&&(PDtimer < (6.6 SECOND)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else if((PDtimer >= (6.6 SECOND))&&(PDtimer < (6.8 SECOND)))
+					turnColour(2, WHITE, WHITE, WHITE);
+				else if((PDtimer >= (6.8 SECOND))&&(PDtimer < (7 SECOND - 10)))
+					turnColour(2, WHITE, GREEN, WHITE);
+				else
+				{
+					turnColour(2, WHITE, WHITE, WHITE);
+				}
+			}
+			break;
+
+		case 8:
+			turnColour(1, RED, YELLOW, WHITE);
+			turnColour(2, WHITE, RED, WHITE);
+			ledvalue = ledswift(ledvalue, 4, 1);
+			ledvalue = ledswift(ledvalue, 5, 0);
+			break;
+		case 9:
+			turnColour(1, WHITE, WHITE, GREEN);
+			ledvalue = ledswift(ledvalue, 4, 0);
+			ledvalue = ledswift(ledvalue, 3, 1);
+			break;
+
+	}
+}
+
+void Button(u16 button)
+{
+	u16 delayCount=0;
+	u16	debounce;
+
+	if(button)
+	{
+		for(delayCount=0;delayCount<=10;delayCount++);
+		//Wait for the button to be released
+		debounce = XGpio_DiscreteRead(&P_BTN_LEFT, 1);
+
+		while (button == 1)
+		{
+			//loop until pushBtnLeftInis is not equal to debounce
+			if(button!=debounce) break;
+			PD = 1;
+			ledvalue = ledswift(ledvalue, 15, 1);
+			delayCount=0;
+			debounce = XGpio_DiscreteRead(&P_BTN_LEFT, 1);
+			displayNumber(timedisplay,0 SECOND);
+			/* Call the method to display counter
+			* This is done here to avoid flickering
+			*/
+		}
+	}
+}
+
+//This function uses a switch to simulate the function of pedestrian button.
+void c(u16 Switch, int position)
+{
+	u16 delayCount=0;
+	u16	debounce;
+
+	if(Switch)
+	{
+		for(delayCount=0;delayCount<=10;delayCount++);
+		//Wait for the button to be released
+		debounce = getSwitch(position);
+
+		while (Switch == 1)
+		{
+			//loop until pushBtnLeftInis is not equal to debounce
+			if(Switch!=debounce) break;
+			PD = 1;
+			ledvalue = ledswift(ledvalue, 15, 1);
+			delayCount=0;
+			debounce = getSwitch(position);
+			displayNumber(timedisplay,0 SECOND);
+			/* Call the method to display counter
+			* This is done here to avoid flickering
+			*/
+		}
+	}
+}
+
+
+//The transmit() function is used to transmit values from control.c to main.c, using pointers to realize,
+//and it is an alternative way of defining variables in header files.
+void transmit(u16 *leddisplay)
+{
+	*leddisplay = ledvalue;
+}

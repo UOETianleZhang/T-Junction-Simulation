@@ -1,0 +1,112 @@
+/*File Name: interface.c
+Project Name: Traffic_Light
+Target Device/Platform: Basys3 Board (with Microblaze processor on the Artix-7 FPGA)
+Tool Version: Xilinx SDK 2015.2
+Name: Tianle Zhang
+Company: University of Edinburgh
+Creation Date and Time: 11/11/2016; 14:07
+Description:
+This source file contains functions which can be called directly, without any global variables used.
+
+There are two functions in this file.
+The ledswift() function is used to change the value of the 16-bit integer ledvalue.
+By selecting a certain position of the ledvalue, you can make the bit set to 1 or reset to 0,
+and calling this function a second time will not change the value again.
+The turnColour() function is used to change the colour at a certain column(1, 2, 3 and 4).
+
+All these functions are declared in the interface.h header file.*/
+
+#include "control.h"
+#include <stdio.h>
+#include "platform.h"
+#include "gpio_init.h"
+#include "xgpio.h"
+#include "interface.h"
+#include "seg7_display.h"
+#include "xil_types.h"
+
+/*The ledswift() function is used to change the value of the 16-bit integer ledvalue.
+By selecting a certain position of the ledvalue, you can make the bit set to 1 or reset to 0,
+and calling this function a second time will not change the value again.
+how to use: ledvalue = ledswift(ledvalue, which_bit_to_change(0,1,...15), on(1)_or_off(0));
+*/
+u16 ledswift(u16 ledvalue, int position, int onoff)
+{
+	u16 addent=0x0001;
+	u16 judge;
+	int positionvalue;
+
+	if(onoff)
+	{
+		judge= ledvalue >> position;
+		positionvalue = judge % 2;
+		if(!positionvalue)			//addition done only if the bit is 0
+			ledvalue = ledvalue + (addent<<position);
+	}
+	else
+	{
+		judge= ledvalue >> position;
+		positionvalue = judge % 2;
+		if(positionvalue)			//subtraction done only if the bit is 1
+			ledvalue = ledvalue - (addent<<position);
+	}
+	return ledvalue;
+}
+
+//The turnColour() function is used to change the colour at a certain column(1, 2, 3 and 4).
+//how to use: turnColour(which_column, colour_above , colour_middle, colour_bottom);
+void turnColour(int column, u16 colour_1 , u16 colour_2, u16 colour_3)
+{
+
+	switch(column)
+	{
+	case 1:
+	    region_0 = colour_1;
+	    region_1 = colour_2;
+	    region_2 = colour_3;
+	    break;
+
+	case 2:
+	    region_3 = colour_1;
+	    region_4 = colour_2;
+	    region_5 = colour_3;
+	    break;
+
+	case 3:
+	    region_6 = colour_1;
+	    region_7 = colour_2;
+	    region_8 = colour_3;
+	    break;
+
+/*	case 4:
+	    region_9 = colour_1;
+	    region_10 = colour_2;
+	    region_11 = colour_3;
+	    break;*/
+
+	default:
+	    region_0 = WHITE;
+	    region_1 = WHITE;
+	    region_2 = WHITE;
+
+	}
+}
+
+int getSwitch(int position)
+{
+	u16 SwitchIn;
+	int SwichValue[12];
+	int i;
+	int SwitchOut;
+
+	SwitchIn= XGpio_DiscreteRead(&SLIDE_SWITCHES, 1);
+
+	for(i=0;i<=11;i++)
+	{
+		SwichValue[i] = SwitchIn%2;
+		SwitchIn = SwitchIn/2;
+	}
+
+	SwichOut = SwichValue[position];
+	return SwitchOut;
+}

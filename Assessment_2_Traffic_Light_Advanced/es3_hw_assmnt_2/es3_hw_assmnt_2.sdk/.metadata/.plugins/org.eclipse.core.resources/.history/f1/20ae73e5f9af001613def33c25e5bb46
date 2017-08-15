@@ -1,0 +1,183 @@
+/*File Name: gpio_init.c
+Project Name: Traffic_Light
+Target Device/Platform: Basys3 Board (with Microblaze processor on the Artix-7 FPGA)
+Tool Version: Xilinx SDK 2015.2
+Name: Tianle Zhang
+Company: University of Edinburgh
+Creation Date and Time: 11/11/2016; 14:07
+Description:
+This source file is to initialise hardware interfaces.
+*/
+#include "gpio_init.h"
+
+XStatus initGpio(void)
+{
+	XStatus status;
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&SEG7_HEX_OUT, 0);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&SEG7_SEL_OUT, 1);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_0, 7);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_1, 10);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_2, 11);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_3, 12);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_4, 13);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_5, 14);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_6, 15);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_7, 16);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_8, 17);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_9, 18);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_10, 8);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_REGION_11, 9);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_HS, 20);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&VGA_VS, 21);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&P_BTN_LEFT, 4);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&BTNR, 5);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&P_BTN_UP, 6);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&P_BTN_DOWN, 3);
+
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&SLIDE_SWITCHES, 19);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XGpio_Initialize(&LED_OUT, 2);
+
+
+
+	return XST_SUCCESS;
+}

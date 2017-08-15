@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/Advanced_Taffic_light/src/helloworld.c" element2="/Advanced_Taffic_light/src/platform_config.h" element3="/Advanced_Taffic_light/src/platform.c" element4="/Advanced_Taffic_light/src/platform.h" element5="/Advanced_Taffic_light/src/lscript.ld" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1479606124098"/>
+</session>

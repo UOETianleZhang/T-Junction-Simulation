@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Nov 24 12:07:01 2016
+# Process ID: 12740
+# Log file: E:/software/Assessment_2_Traffic_Light_Ad4.0/es3_hw_assmnt_2/vivado.log
+# Journal file: E:/software/Assessment_2_Traffic_Light_Ad4.0/es3_hw_assmnt_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/software/Assessment_2_Traffic_Light_Ad4.0/es3_hw_assmnt_2/es3_hw_assmnt_2.xpr
+INFO: [Project 1-313] Project file moved from '/home/s1678924/Desktop/software3/Assessment_2_Traffic_Light_Ad3.0/es3_hw_assmnt_2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/2015/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:26 . Memory (MB): peak = 812.332 ; gain = 226.617
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 24 12:08:18 2016...

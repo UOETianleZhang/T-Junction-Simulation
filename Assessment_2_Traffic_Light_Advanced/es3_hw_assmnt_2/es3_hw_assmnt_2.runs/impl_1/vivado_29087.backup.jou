@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun Nov 20 14:20:27 2016
+# Process ID: 7072
+# Log file: E:/software/Advanced/Assessment_2_Traffic_Light/es3_hw_assmnt_2/es3_hw_assmnt_2.runs/impl_1/top.vdi
+# Journal file: E:/software/Advanced/Assessment_2_Traffic_Light/es3_hw_assmnt_2/es3_hw_assmnt_2.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace

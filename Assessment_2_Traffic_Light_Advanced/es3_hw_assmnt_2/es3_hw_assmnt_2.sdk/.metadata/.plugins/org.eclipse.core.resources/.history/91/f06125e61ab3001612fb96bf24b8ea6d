@@ -1,0 +1,55 @@
+/*File Name: control.h
+Project Name: Traffic_Light
+Target Device/Platform: Basys3 Board (with Microblaze processor on the Artix-7 FPGA)
+Tool Version: Xilinx SDK 2015.2
+Name: Tianle Zhang
+Company: University of Edinburgh
+Creation Date and Time: 11/11/2016; 14:07
+Description:
+This header file contains nearly all macros and variables across files.
+This header file contains all declarations of functions in control.c.
+*/
+
+#ifndef CONTROL_H_
+#define CONTROL_H_
+#include "control.h"
+#include <stdio.h>
+#include "platform.h"
+#include "gpio_init.h"
+#include "xgpio.h"
+
+//define different colours used in VGA
+#define RED 0xF00
+#define YELLOW 0xFF0
+#define GREEN 0x0F0
+#define WHITE 0xFFF
+#define BLACK 0x000
+#define BLUE 0x00F
+//because the interrupt occurs every 0.004s,
+//in one second it happens 250 times
+#define SECOND * 250
+
+void changeMode();
+void setDisplayTime(int period, int order);
+void transmit(u16 *leddisplay);
+void Button(u16 button);
+void displayLightbyMode(int mode);
+void Switch(u16 Switch, int position);
+
+u16 region_0;
+u16 region_1;
+u16 region_2;
+u16 region_4;
+u16 region_6;
+u16 region_7;
+u16 region_8;
+double target_x;
+double target_y;
+double target2_x;
+double target2_y;
+u16 target_colour;
+
+int mode;		//representing the state of the traffic light
+int timedisplay;	//the number displaying on 7-segment
+
+#endif /* CONTROL_H_ */

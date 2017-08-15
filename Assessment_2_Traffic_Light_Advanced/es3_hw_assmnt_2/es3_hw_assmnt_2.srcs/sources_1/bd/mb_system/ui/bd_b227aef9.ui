@@ -1,0 +1,126 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.12  2014-12-16 bk=1.3272 VDI=35 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port REGION_7_COLOUR -pg 1 -y 1500 -defaultsOSRD
+preplace port P_BTN_L -pg 1 -y 300 -defaultsOSRD
+preplace port REGION_0_COLOUR -pg 1 -y 660 -defaultsOSRD
+preplace port REGION_2_COLOUR -pg 1 -y 900 -defaultsOSRD
+preplace port REGION_6_COLOUR -pg 1 -y 1380 -defaultsOSRD
+preplace port SEG7_SEL_OUT -pg 1 -y 2100 -defaultsOSRD
+preplace port clk_in -pg 1 -y 1920 -defaultsOSRD
+preplace port REGION_8_COLOUR -pg 1 -y 1620 -defaultsOSRD
+preplace port REGION_3_COLOUR -pg 1 -y 1020 -defaultsOSRD
+preplace port VGA_VS -pg 1 -y 2580 -defaultsOSRD
+preplace port REGION_10_COLOUR -pg 1 -y 1860 -defaultsOSRD
+preplace port uart -pg 1 -y 2330 -defaultsOSRD
+preplace port LED_OUT -pg 1 -y 60 -defaultsOSRD
+preplace port REGION_5_COLOUR -pg 1 -y 1260 -defaultsOSRD
+preplace port P_BTN_D -pg 1 -y 180 -defaultsOSRD
+preplace port REGION_4_COLOUR -pg 1 -y 1140 -defaultsOSRD
+preplace port P_BTN_R -pg 1 -y 420 -defaultsOSRD
+preplace port SEG7_HEX_OUT -pg 1 -y 2700 -defaultsOSRD
+preplace port REGION_9_COLOUR -pg 1 -y 1740 -defaultsOSRD
+preplace port REGION_1_COLOUR -pg 1 -y 780 -defaultsOSRD
+preplace port ext_reset_in -pg 1 -y 1990 -defaultsOSRD
+preplace port VGA_HS -pg 1 -y 2460 -defaultsOSRD
+preplace port P_BTN_U -pg 1 -y 540 -defaultsOSRD
+preplace port S_SWITCHES -pg 1 -y 2220 -defaultsOSRD
+preplace port REGION_11_COLOUR -pg 1 -y 1980 -defaultsOSRD
+preplace inst gpio_reg_4_colour_out -pg 1 -lvl 6 -y 1140 -defaultsOSRD
+preplace inst gpio_p_btn_u -pg 1 -lvl 6 -y 540 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 3 -y 2020 -defaultsOSRD
+preplace inst gpio_leds -pg 1 -lvl 6 -y 60 -defaultsOSRD
+preplace inst gpio_reg_11_colour_out -pg 1 -lvl 6 -y 1980 -defaultsOSRD
+preplace inst gpio_reg_7_colour_out -pg 1 -lvl 6 -y 1500 -defaultsOSRD
+preplace inst gpio_reg_0_colour_out -pg 1 -lvl 6 -y 660 -defaultsOSRD
+preplace inst gpio_reg_6_colour_out -pg 1 -lvl 6 -y 1380 -defaultsOSRD
+preplace inst gpio_reg_1_colour_out -pg 1 -lvl 6 -y 780 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -y 1230 -defaultsOSRD
+preplace inst fit_timer_0 -pg 1 -lvl 2 -y 1960 -defaultsOSRD
+preplace inst gpio_p_btn_l -pg 1 -lvl 6 -y 300 -defaultsOSRD
+preplace inst gpio_7seg_hex_out -pg 1 -lvl 6 -y 2700 -defaultsOSRD
+preplace inst gpio_reg_9_colour_out -pg 1 -lvl 6 -y 1740 -defaultsOSRD
+preplace inst gpio_reg_5_colour_out -pg 1 -lvl 6 -y 1260 -defaultsOSRD
+preplace inst mdm_0 -pg 1 -lvl 3 -y 1770 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -y 1910 -defaultsOSRD
+preplace inst gpio_s_switches -pg 1 -lvl 6 -y 2220 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -y 2340 -defaultsOSRD
+preplace inst gpio_reg_8_colour_out -pg 1 -lvl 6 -y 1620 -defaultsOSRD
+preplace inst gpio_reg_3_colour_out -pg 1 -lvl 6 -y 1020 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 1 -y 2010 -defaultsOSRD
+preplace inst gpio_reg_2_colour_out -pg 1 -lvl 6 -y 900 -defaultsOSRD
+preplace inst gpio_p_btn_d -pg 1 -lvl 6 -y 180 -defaultsOSRD
+preplace inst gpio_reg_10_colour_out -pg 1 -lvl 6 -y 1860 -defaultsOSRD
+preplace inst gpio_vga_hs -pg 1 -lvl 6 -y 2460 -defaultsOSRD
+preplace inst gpio_p_btn_r -pg 1 -lvl 6 -y 420 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 1920 -defaultsOSRD
+preplace inst gpio_vgs_vs -pg 1 -lvl 6 -y 2580 -defaultsOSRD
+preplace inst gpio_7seg_sel -pg 1 -lvl 6 -y 2100 -defaultsOSRD
+preplace netloc microblaze_0_axi_periph_M23_AXI 1 5 1 1810
+preplace netloc microblaze_0_axi_periph_M15_AXI 1 5 1 1950
+preplace netloc gpio_reg_1_colour_out2_GPIO1 1 6 1 N
+preplace netloc gpio_reg_1_colour_out1_GPIO 1 6 1 N
+preplace netloc gpio_p_btn_d_GPIO 1 6 1 N
+preplace netloc gpio_p_btn_l_GPIO 1 6 1 N
+preplace netloc gpio_leds_GPIO 1 6 1 N
+preplace netloc axi_intc_0_interrupt 1 3 1 960
+preplace netloc gpio_reg_1_colour_out2_GPIO2 1 6 1 N
+preplace netloc microblaze_0_axi_periph_M08_AXI 1 5 1 1870
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 1930
+preplace netloc microblaze_0_axi_periph_M21_AXI 1 5 1 1920
+preplace netloc microblaze_0_axi_periph_M19_AXI 1 5 1 1860
+preplace netloc microblaze_0_axi_periph_M18_AXI 1 5 1 N
+preplace netloc gpio_p_btn_r_GPIO 1 6 1 N
+preplace netloc microblaze_0_axi_periph_M13_AXI 1 2 4 710 1920 NJ 2020 NJ 2020 1800
+preplace netloc mdm_0_Debug_SYS_Rst 1 0 4 140 1710 NJ 1710 NJ 1710 950
+preplace netloc gpio_vga_region1_GPIO1 1 6 1 N
+preplace netloc microblaze_0_Clk 1 0 6 130 2100 490 1890 700 1930 1000 2000 1460 2000 1900
+preplace netloc microblaze_0_axi_periph_M22_AXI 1 5 1 1820
+preplace netloc gpio_vga_hs_GPIO 1 6 1 N
+preplace netloc microblaze_0_axi_periph_M06_AXI 1 5 1 1890
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 1880
+preplace netloc microblaze_0_axi_periph_M10_AXI 1 5 1 1860
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 5 1 1790
+preplace netloc microblaze_0_M_AXI_DP 1 4 1 1440
+preplace netloc microblaze_0_ilmb_1 1 4 1 N
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 1850
+preplace netloc fit_timer_0_Interrupt 1 2 1 680
+preplace netloc microblaze_0_axi_periph_M16_AXI 1 5 1 1940
+preplace netloc gpio_reg_1_colour_out3_GPIO1 1 6 1 N
+preplace netloc gpio_7seg_GPIO 1 6 1 N
+preplace netloc rst_clk_wiz_1_100M_interconnect_aresetn 1 1 4 460 1870 NJ 1870 NJ 1990 NJ
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 1 4 470 1880 NJ 1880 NJ 2010 NJ
+preplace netloc gpio_reg_1_colour_out3_GPIO2 1 6 1 N
+preplace netloc gpio_reg_1_colour_out3_GPIO 1 6 1 N
+preplace netloc gpio_vga_hs1_GPIO 1 6 1 N
+preplace netloc gpio_vga_colour_out_GPIO 1 6 1 N
+preplace netloc gpio_s_switches_GPIO 1 6 1 N
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 5 1 1790
+preplace netloc ext_reset_in_1 1 0 1 N
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 1 5 500 2030 690 1940 NJ 2030 1470 2010 1910
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 1 3 NJ 1900 NJ 1900 980
+preplace netloc axi_uartlite_0_UART 1 6 1 N
+preplace netloc gpio_7seg_sel_GPIO 1 6 1 N
+preplace netloc gpio_p_buttons_GPIO 1 6 1 N
+preplace netloc microblaze_0_axi_periph_M14_AXI 1 5 1 1780
+preplace netloc gpio_reg_1_colour_out1_GPIO1 1 6 1 N
+preplace netloc gpio_reg_1_colour_out2_GPIO 1 6 1 N
+preplace netloc gpio_vgs_vs_GPIO 1 6 1 N
+preplace netloc mdm_0_MBDEBUG_0 1 3 1 1000
+preplace netloc microblaze_0_axi_periph_M07_AXI 1 5 1 1840
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 1800
+preplace netloc microblaze_0_dlmb_1 1 4 1 N
+preplace netloc microblaze_0_axi_periph_M20_AXI 1 5 1 1780
+preplace netloc gpio_vga_region1_GPIO 1 6 1 N
+preplace netloc microblaze_0_axi_periph_M17_AXI 1 5 1 1960
+preplace netloc microblaze_0_axi_periph_M12_AXI 1 5 1 1830
+preplace netloc microblaze_0_axi_periph_M11_AXI 1 5 1 1830
+preplace netloc microblaze_0_axi_periph_M09_AXI 1 5 1 1810
+levelinfo -pg 1 110 300 590 830 1220 1630 2060 2190
+",
+}
+{
+   da_axi4_cnt: "24",
+   da_board_cnt: "3",
+   da_mb_cnt: "1",
+}

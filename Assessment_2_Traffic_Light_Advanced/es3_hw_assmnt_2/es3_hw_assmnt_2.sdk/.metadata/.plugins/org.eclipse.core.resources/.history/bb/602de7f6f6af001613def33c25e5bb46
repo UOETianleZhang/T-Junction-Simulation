@@ -1,0 +1,27 @@
+/*File Name: timer_interrupt_func.c
+Project Name: Traffic_Light
+Target Device/Platform: Basys3 Board (with Microblaze processor on the Artix-7 FPGA)
+Tool Version: Xilinx SDK 2015.2
+Name: Tianle Zhang
+Company: University of Edinburgh
+Creation Date and Time: 11/11/2016; 14:07
+Description:
+This source file is to call the interrupt function hwTimerISR().
+*/
+
+#include "control.h"
+#include "control.h"
+#include <stdio.h>
+#include "platform.h"
+#include "gpio_init.h"
+#include "xgpio.h"
+#include "interface.h"
+#include "seg7_display.h"
+#include "xil_types.h"
+
+void hwTimerISR(void *CallbackRef)
+{
+	changeMode();
+	displayDigit();
+	ChangeCarPosition();
+}

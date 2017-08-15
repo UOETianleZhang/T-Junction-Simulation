@@ -1,0 +1,181 @@
+/*File Name: extra.c
+Project Name: Traffic_Light
+Target Device/Platform: Basys3 Board (with Microblaze processor on the Artix-7 FPGA)
+Tool Version: Xilinx SDK 2015.2
+Name: Tianle Zhang
+Company: University of Edinburgh
+Creation Date and Time: 11/11/2016; 14:07
+Description:
+This source file contains nearly all extra features used to drive the cars.
+
+There are several functions in this file.
+The changeMode() function is called by the hwTimerISR(), used to change states of traffic light.
+The setDisplayTime() function is to set the display period of a individual state,
+by receiving a period you want and the state number,
+and it is just used in the changeMode().
+
+The displayLightbyMode() function receives an integer, to display different traffic light states by the integer
+The Button() function is used to avoid bounces, and change PD signal when finish pressing the left button.
+The transmit() function is used to transmit values from control.c to main.c, using pointers to realize,
+and it is an alternative way of defining variables in header files.
+
+All these functions are declared in the control.h header file.*/
+#include <stdio.h>
+#include "platform.h"
+#include "gpio_init.h"
+#include "xgpio.h"
+#include "control.h"
+#include "interface.h"
+#include "seg7_display.h"
+#include "xil_types.h"
+#include "extra.h"
+
+int initial=1;	//when it is 1, let the car1 get back to the initial position
+int initial2=1;	//when it is 1, let the car2 get back to the initial position
+double Car_speed=0;
+double Car_speed2=0;
+u16 BtnUpIn;
+u16 BtnDownIn;
+u16 BtnLeftIn;
+u16 BtnRightIn;
+
+/*This function is called in interrupt system, changing addresses of the car1
+ * (target_x and target_y in control.h).
+ * the car1 can either cross the road by itself,or be controlled by 4 buttons artificially.
+ *  To be noticed, the car will accelerate
+ * at the beginning, and decelerate when it wants to stop.
+ */
+void DisplayCarByPosition()
+{
+
+	if(!carMode)	//artificial mode
+	{
+		excute(BtnUpIn, P_BTN_UP, UP);
+		excute(BtnDownIn, P_BTN_DOWN, DOWN);
+		excute(BtnLeftIn, P_BTN_LEFT, LEFT);
+		excute(BtnRightIn, P_BTN_RIGHT, RIGHT);
+
+		initial=1;
+	}
+	else			//automatic mode
+	{
+		if(initial)	//let the car1 get back to the initial position
+		{
+			target_x = 0;
+			target_y = 165;	//begin at road1
+			initial=0;	//only execute the initialization once
+			Car_speed=0;
+		}
+		if(target_x<(290-CARWIDTH))	//if it is before the waiting line
+		{
+			if((region_2==GREEN)||(target_x<(290-CARWIDTH-125*Car_speed)))
+				//accelerate to the speed of 0.6pixel/0.004s
+				target_x=accelerate(target_x, 1.5 SECOND, 0, 0.6, &Car_speed);
+			else
+				//if the traffic light is not green, the car1 will decelerate until stop
+				target_x=accelerate(target_x, 1 SECOND, 0.6, 0, &Car_speed);
+		}
+		else if(target_x<(322))
+		{
+			//if((region_2==GREEN)||(target_x>(290-CARWIDTH)))
+			//{
+				target_x=accelerate(target_x, 1 SECOND, 0, 0.6, &Car_speed);
+			//}
+		}
+		else if(((target_x>=(322))&&(target_y>=1))) //already on the road2
+			target_y=speed(target_y,-0.6); //keep the speed of 0.5
+		else
+		{
+			target_x = 0;	//get back to form a loop
+			target_y = 165;
+			Car_speed=0;
+		}
+	}
+
+}
+
+
+void excute(u16 button, XGpio P_BTN, int direction)
+{
+	button= XGpio_DiscreteRead(&P_BTN, 1);
+
+	switch(direction)
+	{
+		case 1:
+			if(button)
+				target_y--;
+			break;
+		case 2:
+			if(button)
+				target_x--;
+			break;
+		case 3:
+			if(button)
+				target_y++;
+			break;
+		case 4:
+			if(button)
+				target_x++;
+			break;
+	}
+
+}
+
+void AIcar2()
+{
+	//similar pattern with the car1
+	if(initial2)
+		{
+			target2_x = 475 - CARHEIGHT;
+			target2_y = 0;
+			initial2 = 0;
+			Car_speed2 = 0.4;
+		}
+		if(target2_y<(110-CARWIDTH))
+			target2_y=accelerate(target2_y, 0.5 SECOND, 0, 0.4, &Car_speed2);
+		else if((target2_y>=(110-CARWIDTH))&&(target2_y<=(400-CARWIDTH)))
+		{
+			if((region_8==GREEN)||(target2_y>=(140-CARWIDTH)))
+				target2_y=accelerate(target2_y, 1 SECOND, 0, 0.4, &Car_speed2);
+			else
+				target2_y=accelerate(target2_y, 1 SECOND, 0.4, 0, &Car_speed2);
+		}
+
+		else if((target2_y+CARWIDTH)<479)
+			target2_y=accelerate(target2_y, 0.5 SECOND, 0, 0.4, &Car_speed2);
+		else
+		{
+			target2_x = 475 - CARHEIGHT;
+			target2_y = 0;
+			Car_speed2 = 0;
+		}
+}
+
+double speed(double address, double speed_add)
+{
+	address = address + speed_add;
+	return address;
+}
+
+double accelerate(double address, double period, double LeftLimitSpeed, double RightLimitSpeed, double *speed_add)
+{
+	if(RightLimitSpeed>LeftLimitSpeed)
+	{	if(*speed_add<RightLimitSpeed)
+			*speed_add= *speed_add+(RightLimitSpeed-LeftLimitSpeed)/period;
+	}
+	else
+	{
+		if(*speed_add>RightLimitSpeed)
+				*speed_add= *speed_add+(RightLimitSpeed-LeftLimitSpeed)/period;
+	}
+
+	address = speed(address,*speed_add);
+	return address;
+}
+void ColourCar1()
+{
+	if((region_2!=GREEN)&&((target_x+CARWIDTH)>(320))&&(target_x<(480))&&((target_y+CARHEIGHT)>(160))&&(target_y<(320)))
+		target_colour = RED;
+	else
+		target_colour = BLUE;
+}

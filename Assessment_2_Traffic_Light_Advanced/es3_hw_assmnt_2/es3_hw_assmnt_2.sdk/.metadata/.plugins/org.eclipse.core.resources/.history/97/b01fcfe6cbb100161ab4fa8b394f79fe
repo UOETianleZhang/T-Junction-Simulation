@@ -1,0 +1,35 @@
+/*
+ * extra.h
+ *
+ *  Created on: 2016��11��20��
+ *      Author: Administrator
+ */
+
+#ifndef EXTRA_H_
+#define EXTRA_H_
+
+#include <stdio.h>
+#include "platform.h"
+#include "gpio_init.h"
+#include "xgpio.h"
+#include "control.h"
+#include "interface.h"
+#include "seg7_display.h"
+#include "xil_types.h"
+
+#define UP 1
+#define LEFT 2
+#define DOWN 3
+#define RIGHT 4
+#define CARWIDTH 100
+#define CARHEIGHT 50
+
+void DisplayCarByPosition();
+void ChangeCarPosition();
+void excute(u16 button, XGpio P_BTN, int direction);
+double speed(double address, double speed_add);
+double accelerate(double address, double period, double LeftLimitSpeed, double RightLimitSpeed, double *speed_add);
+
+int carMode;
+
+#endif /* EXTRA_H_ */
