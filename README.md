@@ -1,4 +1,4 @@
-# Traffic_Light
+# Traffic Simulation of a T-junction in UK
 Use C language to program the software on FPGA
 This project is to display traffic lights for two roads.
 
